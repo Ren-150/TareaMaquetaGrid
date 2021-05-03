@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: burlywood;
+    padding: 20px;
+}
+
+#grid1{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 150px;
+
+    grid-template-areas: "nav1"
+                         "header1";
+}
+
+.nav1{
+    background-color: greenyellow;
+    grid-area: nav1;
+}
+
+.header1{
+    background-color: yellow;
+    grid-area: header1;
+}
+
+#grid2{
+    display: grid;
+    width: 100%;
+    height: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 2.4fr 3.4fr;
+    grid-template-rows: 50px 250px;
+
+    grid-template-areas: "nav2 nav2 nav2"
+                         "aside1 caja1 caja2";
+}
+
+.nav2{
+    background-color: lightseagreen;
+    grid-area: nav2;
+}
+
+.aside1{
+    background-color: magenta;
+    grid-area: aside1;
+}
+
+.caja1{
+    background-color: mediumblue;
+    grid-area: caja1;
+}
+
+.caja2{
+    background-color: turquoise;
+    grid-area: caja2;
+}
+
+#grid3{
+    display: grid;
+    width: 100%;
+    height: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 2.4fr 3.4fr;
+    grid-template-rows: 70px 50px;
+
+    grid-template-areas: "aside2 nav3 nav3"
+                         "footer footer footer";
+}
+
+.aside2{
+    background-color: rgb(174, 0, 255);
+    grid-area: aside2;
+}
+
+.nav3{
+    background-color: orange;
+    grid-area: nav3;
+}
+
+.footer1{
+    background-color: red;
+    grid-area: footer;
+}
+
+@media screen and (max-width:600px) {
+    #grid2{
+        display: grid;
+        width: 100%;
+        height: 60%;
+        max-width: 1000px;
+        margin: 0 auto;
+        grid-template-columns: 2fr 2.4fr;
+        grid-template-rows: 50px 250px 250px;
+    
+        grid-template-areas: "nav2 nav2 nav2"
+                             "aside1 caja1 caja1"
+                             "caja2 caja2 caja2";
+    }
+
+    #grid3{
+        display: grid;
+    width: 100%;
+    height: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 2.4fr 3.4fr;
+    grid-template-rows: 70px 70px 50px;
+
+    grid-template-areas: "aside2 aside2 aside2"
+                         "nav3 nav3 nav3"
+                         "footer footer footer";
+    }
+}
+
+@media screen and (max-width:450px) {
+    #grid2{
+        display: grid;
+        width: 100%;
+        height: 60%;
+        max-width: 1000px;
+        margin: 0 auto;
+        grid-template-columns: 2fr 2.4fr;
+        grid-template-rows: 50px 250px 250px 250px;
+    
+        grid-template-areas: "nav2 nav2 nav2"
+                             "aside1 aside1 aside1"
+                             "caja1 caja1 caja1"
+                             "caja2 caja2 caja2";
+    }
+}
